@@ -1,3 +1,17 @@
+'''
+########################################################################################################
+# Copyright 2019 F4E | European Joint Undertaking for ITER and the Development                         #
+# of Fusion Energy (‘Fusion for Energy’). Licensed under the EUPL, Version 1.1                         #
+# or - as soon they will be approved by the European Commission - subsequent versions                  #
+# of the EUPL (the “Licence”). You may not use this work except in compliance                          #
+# with the Licence. You may obtain a copy of the Licence at: http://ec.europa.eu/idabc/eupl.html       #
+# Unless required by applicable law or agreed to in writing, software distributed                      #
+# under the Licence is distributed on an “AS IS” basis, WITHOUT WARRANTIES                             #
+# OR CONDITIONS OF ANY KIND, either express or implied. See the Licence permissions                    #
+# and limitations under the Licence.                                                                   #
+########################################################################################################
+'''
+
 ##----------------------------------------------------------------------------##
 ##                         ********    **   ********                          ##
 ##                         ********   ***   ********                          ##
@@ -29,11 +43,11 @@
  
     # e-MAIL/S: marco.fabbri@f4e.europa.eu, fogando@ind.uned.es
  
-    # DATE: 18/06/2019
+    # DATE: 18/11/2019
 
     # Copyright F4E 2019
  
-    # IDM: F4E_D_27S8RF_v2.1  
+    # IDM: F4E_D_27S8RF_v2.2  
  
     # DESCRIPTION: This script creates a complete MCNP sdef card for a set of pipes containing activated water.
 	#              The activation levels may be set homogeneously or according to a set of cell tag labels.
@@ -56,9 +70,10 @@
     #                                  1) Variable name properly referenced in line 226. 
     #                                  2) Added CX, CY, CZ in the recognized surface definitions.
     #                                  3) Added the capacity to work with hollow pipes.    
+	#            2.2 [2019-11-18] ---> 1) EUPL License statement added in the memo
+    #                                  2) EUPL License statement added in the script   
 	
-
-	# IMPROVEMENTS:   
+    # IMPROVEMENTS:   
 	#               --> 
 	#				--> 
    
