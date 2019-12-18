@@ -1,7 +1,7 @@
 '''
 ########################################################################################################
 # Copyright 2019 F4E | European Joint Undertaking for ITER and the Development                         #
-# of Fusion Energy (‘Fusion for Energy’). Licensed under the EUPL, Version 1.1                         #
+# of Fusion Energy (‘Fusion for Energy’). Licensed under the EUPL, Version 1.2                         #
 # or - as soon they will be approved by the European Commission - subsequent versions                  #
 # of the EUPL (the “Licence”). You may not use this work except in compliance                          #
 # with the Licence. You may obtain a copy of the Licence at: http://ec.europa.eu/idabc/eupl.html       #
@@ -39,15 +39,15 @@
  
     # LANGUAGE: PYTHON 2.7
 	
-    # AUTHOR/S: Marco Fabbri, Francisco Ogando
+    # AUTHOR/S: Francisco Ogando, Marco Fabbri
  
-    # e-MAIL/S: marco.fabbri@f4e.europa.eu, fogando@ind.uned.es
+    # e-MAIL/S: fogando@ind.uned.es, marco.fabbri@f4e.europa.eu
  
-    # DATE: 18/11/2019
+    # DATE: 17/12/2019
 
     # Copyright F4E 2019
  
-    # IDM: F4E_D_27S8RF_v2.2  
+    # IDM: F4E_D_2F96Z4  
  
     # DESCRIPTION: This script creates a complete MCNP sdef card for a set of pipes containing activated water.
 	#              The activation levels may be set homogeneously or according to a set of cell tag labels.
@@ -60,18 +60,20 @@
 	# OUTPUT:     IN_FILE_[SDEF+TYPE] --> text file containing SDEF card to be copy pasted in the MCNP file.
 
 	# VERSIONS: 
-	#            1.0 [2017-01-19] ---> Developed by Francisco Ogando (UNED) under the F4E EXP-238,https://idm.f4e.europa.eu/?uid=27S8RF
-	#                                  Starting version.
-	#            2.0 [2019-06-18] ---> Improved by Marco Fabbri (F4E) for further usage. Changes implemented:
-	#                                  1) SD distribution optimized. No repetitions are present. EXT and RAD values are unique.
-	#   							   2) User has now the possibility to create SDEF as CYLINDERS, SURFACE SOURCE or LINES.
-    #                                     Surface source might be usefull for ACP.
-    #            2.1 [2019-07-19] ---> Debugged by Alvaro Cubi. Changes implemented: 
-    #                                  1) Variable name properly referenced in line 226. 
-    #                                  2) Added CX, CY, CZ in the recognized surface definitions.
-    #                                  3) Added the capacity to work with hollow pipes.    
-	#            2.2 [2019-11-18] ---> 1) EUPL License statement added in the memo
-    #                                  2) EUPL License statement added in the script   
+	#            1.0 [2017-01-19]  ---> Developed by Francisco Ogando (UNED) under the F4E EXP-238,https://idm.f4e.europa.eu/?uid=27S8RF
+	#                                   Starting version.
+	#            2.0 [2019-06-18]  ---> Improved by Marco Fabbri (F4E) for further usage. Changes implemented:
+	#                                   1) SD distribution optimized. No repetitions are present. EXT and RAD values are unique.
+	#   							    2) User has now the possibility to create SDEF as CYLINDERS, SURFACE SOURCE or LINES.
+    #                                      Surface source might be usefull for ACP.
+    #            2.1 [2019-07-19]  ---> Debugged by Alvaro Cubi. Changes implemented: 
+    #                                   1) Variable name properly referenced in line 226. 
+    #                                   2) Added CX, CY, CZ in the recognized surface definitions.
+    #                                   3) Added the capacity to work with hollow pipes.    
+	#            2.2 [2019-11-18]  ---> 1) EUPL License statement added in the memo
+    #                                   2) EUPL License statement added in the script   
+    #            2.3 [2019-12-17]  ---> 1) EUPL License version updated from v.1.1 to 1.2 both in the memo and in the script
+    #                                   2) Order of authors corrected as Francisco Ogando has developped most of the code
 	
     # IMPROVEMENTS:   
 	#               --> 
