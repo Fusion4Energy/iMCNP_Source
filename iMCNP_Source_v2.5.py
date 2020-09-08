@@ -76,7 +76,8 @@
     #                                   2) Order of authors corrected as Francisco Ogando has developped most of the code
     #            2.4 [2020-09-03]  ---> 1) Converted to python 3.6
     #                                   2) Starting distribution number can be imposed by the user changing the value of "startDISTR" variable
-    #                                   3) Pos and axs distribution are flagged according to the cell tags if present
+    #                                   3) Pos and axs distribution are flagged according to the cell tags if present    
+    #            2.5 [2020-09-03]  ---> 1) SDEF output format corrected to avoid characters after 80 ln
     
     
  
@@ -109,6 +110,7 @@ def writeMcnpArray(lab,fmt,arr,tags=None):
    else:
      lf = lambda x:fmt.format(x)
    for val in map(lf,arr):
+     flag=False
      sval = len(val)
      if counter==0:
        locStr+='\nC actflag@{}\n'.format(tags[0])
@@ -120,8 +122,9 @@ def writeMcnpArray(lab,fmt,arr,tags=None):
      if slen+sval > maxLen:
        if flag!=True:
         locStr += '\n' + ' '*5
-        flag=False
         slen = 5
+       else:
+        slen = 5       
      locStr += val 
      slen   += sval
      counter+=1
@@ -186,6 +189,8 @@ isTagged = True
 actDict  = { 'y_pos_water_top':7.5679e9, 'y_pos_water_bottom':0., \
              'y_neg_water_top':7.5679e9, 'y_neg_water_bottom':0., \
              'c_pos_water_top':7.5679e9, 'c_pos_water_bottom':0., \
+             ' inlet_water':7.5679e9, 'c_pos_water_bottom':0., \
+             ' outlet_water':7.5679e9, 'c_pos_water_bottom':0., \
              'c_neg_water_top':7.5679e9, 'c_neg_water_bottom':0. }
 # Energy spectrum of emitted radiation (MCNP format for SI6 ending in EOL)
 ergSpectrum='C . . Spectrum for N-16\n' +                                                                              \
@@ -446,9 +451,9 @@ elif source == 'acp': # Source as surface source
 f.close()
 
 # Testing
-print(poss)
-print(len(poss))
-print(type(poss))
-print(tag)
-print(tags)
+# print(poss)
+# print(len(poss))
+# print(type(poss))
+# print(tag)
+# print(tags)
 # =====================  END OF ROUTINE ========================================
