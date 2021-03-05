@@ -1,3 +1,9 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/Radiation-Transport/iMCNP_Source)
+![GitHub issues](https://img.shields.io/github/issues/Radiation-Transport/iMCNP_Source)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Radiation-Transport/iMCNP_Source)
+![GitHub top language](https://img.shields.io/github/languages/top/Radiation-Transport/iMCNP_Source)
+![](https://img.shields.io/badge/license-EU%20PL-blue)
+
 # iMCNP_Source
 
 This script creates a complete MCNP sdef card for a set of pipes containing activated water. The activation levels may be set homogeneously or according to a set of cell tag labels. 
